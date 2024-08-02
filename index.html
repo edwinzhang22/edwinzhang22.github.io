@@ -1,0 +1,144 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=mix-line-bar&code=PYBwLglsB2AEC8sDeAoWszGAG0iAXMmuhgE4QDmFApqYQOQCGAHhAM70A0x6L7ACsAjQwtQqhIkwATxDUGAY1LA2HbpPRKVbAMozs8ohpIKcwOrHoBiAJx36PEgF9HL9E_UYs2AEbBm4o4AZtSMYACupIYSGgAmYYwAahDUAO7isGwAFsDpZOHUnLBRjLEA8tDY0oRBjNhs1LAejugAtowUEAoAKrLRmTl5YKQFRTJyhADa9NjC1FyWPoyk9AC6TZ6SUWyYURnZuYTDBRstmYwAbtQAgmwAku00-4NHI41uzsTN6AY00LGBSTxMCMKb0ABMAAZoYAXPUAHHqAeXlAF1ygGPlBYQyFQ-HItFFeiAPI1AP6pgHDnNZfTzMa6sNhTRwxSTjQz0BRhagUczSLhnYGg2DTQD6NoAL1PRgHCAwBheujADhygDzg9GAbXlAI466MAtHJKvGAfz1AHu66MABwbazj0QAHzoB3Wy49EAj7aAZnU1psSHw2IJhKILPSNIyGNlSrkHMYPu5iKtPNIqexaZJXeh3ZYLnUClzjNBGK0majAA6m8Y0rWEhEhtraLEIUOhedgTtoMewheLZ3tABlGD5qJWjMZYEFzO0wM6GEgKwUnLBAOByPo0ftO4bOUfoffmJcTyYYRNJJaz0BzK4LsAAjABWXNnMukCuEXclusNpuA1vt0id7uWXux6gDgCkI8kY4-geIDXI1BpfJ0mc85MkWkLYqiGYMn0DBLCsJaYDgeBXsYM4AGIdmE95BOE0AKJAMCwAAFDOACULatsU1ARKQcAzrAADUlhDki9AANxnP6voljyYatgAzDYO4AHSQvxRT8fxADswlbgALEUABsclycJO5SUUO6ScJUk2EU4L8Ypwn8TuRR2Kp4mwPx4JbsJimWVuBlqYpRRSdCwkABxyWcqyuLaEawCBDBQliiKQQhMGLMsUFSN4yEURo6GYV2Yhtrh-FQHAJFPuRAVbNRkR0U-jHMYOrEcZRY7uDxCR8cYcm6Z5W5FHJW62YZRRbpCclGYpLmwDYck2J5emwCptkec124eYpMl9Up3XCeCo3gnJ_HCTY_VblJO5GZCW4-X5QEJkmTJLjFkaRTMcwXbAwbUnc_zUAE24IXFEAEAlkhJbeWGpTheEEVlZFfRoUQ0UV2AnEx9CwG-FWtlV45xLVfI2cZ-ngqJSlY5ZUkyaNM0bUUHkyR5JME2ZMkKdue52Z1RmmduWO5rARngr5H4BigThsUAA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.5.1/files/dist/echarts.min.js"></script>
+  
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.5.1/files/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts-gl/2/files/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts-stat/latest/files/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-graph-modularity extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts-graph-modularity/2/files/dist/echarts-graph-modularity.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/4.9.0/files/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.5.1/files/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    option = {
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'cross',
+      crossStyle: {
+        color: '#999'
+      }
+    }
+  },
+  toolbox: {
+    feature: {
+      dataView: { show: true, readOnly: false },
+      magicType: { show: true, type: ['line', 'bar'] },
+      restore: { show: true },
+      saveAsImage: { show: true }
+    }
+  },
+  legend: {
+    data: ['2000年常住人口', '2020年常住人口', '增长率']
+  },
+  xAxis: [
+    {
+      type: 'category',
+      data: ['江门', '肇庆', '东莞', '佛山', '中山', '广州', '惠州','珠海','深圳'],
+      axisPointer: {
+        type: 'shadow'
+      }
+    }
+  ],
+  yAxis: [
+    {
+      type: 'value',
+      name: '人口数',
+      min: 0,
+      max: 2000,
+      interval: 200,
+      axisLabel: {
+        formatter: '{value} 万'
+      }
+    },
+    {
+      type: 'value',
+      name: '增长率',
+      min: 0,
+      max: 150,
+      interval: 15,
+      axisLabel: {
+        formatter: '{value} %'
+      }
+    }
+  ],
+  series: [
+    {
+      name: '2000年常住人口',
+      type: 'bar',
+      tooltip: {
+        valueFormatter: function (value) {
+          return value + ' 万人';
+        }
+      },
+      data: [
+        395.03, 337.14, 644.57, 533.79, 236.35, 994.3, 321.63, 123.56, 700.84
+      ]
+    },
+    {
+      name: '2020年常住人口',
+      type: 'bar',
+      tooltip: {
+        valueFormatter: function (value) {
+          return value + ' 万人';
+        }
+      },
+      data: [
+        479.81, 411.36, 1046.66, 949.89, 441.81, 1867.66, 604.29, 243.96, 1756.01
+      ]
+    },
+    {
+      name: '增长率',
+      type: 'line',
+      yAxisIndex: 1,
+      tooltip: {
+        valueFormatter: function (value) {
+          return value + ' %';
+        }
+      },
+      data: [21.3, 22.0, 62.3, 77.9, 86.9, 87.8, 87.9, 97.4, 150.6, 16.5, 12.0, 6.2]
+    }
+  ]
+};
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
