@@ -1,5 +1,6 @@
 <!--
-	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=dataset-series-layout-by
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=dataset-simple0&code=PYBwLglsB2AEC8sDeBYAULWZjADaRAC5l1NMwAnCAc2oFMLiByAQwA8IBnJgGlLPZcACsAjQwDYqgxlyATxB1mAYwrBO3PjNmr1nAMpg5uJSW2zYyvMEawmAYgBmzpv1kBfN7E8z3W8ji4AEbAbFJejnQsYACuFKbSFrAAJtEsAGoQdADuUrCcABbAuVgUMXQ8sPEsyQDy0LhyxI4suJx03v4WALYs1BDKACoKCflFJZTllUaKxADaTLhidLx2QSwUTAC6nV6Y8ZzY8XmFxcSTHX57-SwAbnQAgpwAkr30J-PnZZdePphXMhM9GgyXC5lSYBY8yYACYAAwIwAueoAOPUA8vKALrlAMfKq1hcIAjHCURjsZVcfCiVjVlt-ADMGwHhxOPMvIkLDNTExlNE6NQbHJeNcIVDYAtAHb2gD3dXhMQA4coA84JxgG15QCOOjjAP56ktJgGabQAJdjjAAcGGrsgH0bQAXqTjALfGgGY0qWAIGDALAqUsAoRYapiAUDtADvxUsAqjaAFk1vYA-HSlgDf0wDOilLAI-2gGZ1KWWo1SwCJcoA7WylgG07OM8JiAcIDAGF6UsAtHIqjOAA-dAO622y6skEnBEYgktlZSXZzEKNWKrnM_1-_C2XTkDK4zPMDbITbst1a5QFHdg0BY3Q5WMADqZTpLdMTEOEVsi9MKweEIreYWsMce4Yj7w-wKsAGRYQToZ7MSUwjhsvTAdeYSFP5XcsEA4HLtkkfxkLSsA9vw7RUHQTIiiy1yzvOzD7oSaKUpeo5MOsmwYYEBBgs-sA_nQABib7RJ-sCODE0DKJAMCwAAFMRACUT6EVUdCxBQcDEbAADUdgAeiTAANzXJ205gbIQqDoRMIACxwgAdApCmVAAbGpykAKwAOyVDpADMRnKXpACclTmeZCnKUZm57jCGm6TClRGTCeLKRpRlueZOnKXCPmwDpMKmXp6khaZ5kGUZAAcKmuUZeK2XpBkKRpenKXieI8Ip_lJblemmTpOV6QiymxepHmZXCVV4v5MKWRpcKZY1PAmZlyW5UZzlGTpPB4qFukadc1LmNJ7GyIhHLwgSFIktcmHYSubJ4RARCTRYxFkRQ76UdRtH0XAzETnQbHDkk8Tcbxp0CUJ_4ieJ06ScBl6yXBz17hpznmbFlSxTCMIBUFel4uZqlBYNZUBX9e5-XZDkKTp4NlZUam2bFlnBbFmWozpsWeXpf0KYpAU5T14OVTwxngwSuXmcVBkwgDXkaQNgX-RZuUk1lf2hc5-I8Bp1l2T5RnmZ5BPtYNAWWfVAswqNvyVGQ8HTtNyFwuSaELdOS0bCtsjYHg-GbbI23kR-khUTRdFQMdrFmxYV1xDduDlHdTDCWJEneNcE2YO9cy-zCOnOVTsAEulrNWQplNY3isUZTHe6xWFBmwM1tltbACkWRVOXBfpZmwxpeKZQp5M43ZiXmT9_U6TpCWbk5rV87F_klQNelh2TuXNQj3WxXZ6nC8Pg08JXnk9ZP2UF9zUUjdOY0eF0Y3uE9XgQI4TGgEdsAAGQH1gIzADve_2wg8CIEwwBBAAVnQdFMOd1zdHIADCBQbGAyntGAtRwD20YhfGALEnoeHQF4bIYhkjFGUjUZIABRe44hrxcAkNABgjEmAHAgAALxWJUd-X8f7KTwYQ8BQA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
 -->
 <!DOCTYPE html>
 <html lang="en" style="height: 100%">
@@ -42,35 +43,94 @@
     
     var option;
 
-    option = {
-  legend: {},
-  tooltip: {},
-  dataset: {
-    source: [
-      ['product', '2012', '2013', '2014', '2015'],
-      ['Matcha Latte', 41.1, 30.4, 65.1, 53.3],
-      ['Milk Tea', 86.5, 92.1, 85.7, 83.1],
-      ['Cheese Cocoa', 24.1, 67.2, 79.5, 86.4]
-    ]
+      option = {
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'cross',
+      crossStyle: {
+        color: '#fff'
+      }
+    }
+  },
+  toolbox: {
+    feature: {
+      dataView: { show: true, readOnly: false },
+      magicType: { show: true, type: ['line', 'bar'] },
+      restore: { show: true },
+      saveAsImage: { show: true }
+    }
+  },
+  legend: {
+    data: ['2000年常住人口', '2010年常住人口', '2020年常住人口', ]
   },
   xAxis: [
-    { type: 'category', gridIndex: 0 },
-    { type: 'category', gridIndex: 1 }
+    {
+      type: 'category',
+      data: ['潮州','东莞', '佛山', '广州', '河源', '惠州', '江门', '揭阳','茂名','梅州','清远','汕头','汕尾','韶关','深圳','阳江','云浮','湛江','肇庆','中山','珠海'],
+      axisPointer: {
+        type: 'shadow'
+      }
+    }
   ],
-  yAxis: [{ gridIndex: 0 }, { gridIndex: 1 }],
-  grid: [{ bottom: '55%' }, { top: '55%' }],
+  yAxis: [
+    {
+      type: 'value',
+      name: '人口数',
+      min: 0,
+      max: 2000,
+      interval: 200,
+      axisLabel: {
+        formatter: '{value} 万'
+      }
+    },
+  ],
   series: [
-    // These series are in the first grid.
-    { type: 'bar', seriesLayoutBy: 'row' },
-    { type: 'bar', seriesLayoutBy: 'row' },
-    { type: 'bar', seriesLayoutBy: 'row' },
-    // These series are in the second grid.
-    { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 },
-    { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 },
-    { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 },
-    { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 }
+    {
+      name: '2000年常住人口',
+      type: 'bar',
+      tooltip: {
+        valueFormatter: function (value) {
+          return value + ' 万人';
+        }
+      },
+      data: [
+        240.44, 644.57, 533.79, 994.30, 226.52, 321.63, 395.03, 523.74,523.97,380.2,314.77,467.11,245.31,273.51,700.84,217.04,215.29,607.29,337.14,236.35,123.56
+      ]
+    },
+    {
+      name: '2010年常住人口',
+      type: 'bar',
+      tooltip: {
+        valueFormatter: function (value) {
+          return value + ' 万人';
+        }
+      },
+      data: [
+        266.98, 822.03, 719.43, 1270.08, 295.30, 459.70, 444.89, 587.70,581.78,424.01,369.84,539.10,293.57,282.66,1035.79,242.18,236.01,699.33,391.81,312.09,156.02
+      ]
+    },    
+    {
+      name: '2020年常住人口',
+      type: 'bar',
+      tooltip: {
+        valueFormatter: function (value) {
+          return value + ' 万人';
+        }
+      },
+      data: [
+        256.84, 1046.66, 949.89, 1867.66, 283.77, 604.29, 479.81, 557.78, 617.41,387.32,396.95,550.20,267.28,285.51,1756.01,260.30,238.34,698.12,411.36,411.81,243.96
+      ]
+    },
   ]
 };
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+
 
     if (option && typeof option === 'object') {
       myChart.setOption(option);
