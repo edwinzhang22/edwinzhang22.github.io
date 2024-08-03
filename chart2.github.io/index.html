@@ -1,0 +1,141 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=dataset-simple0&code=PYBwLglsB2AEC8sDeBYAULWZjADaRAC5l1NMwAnCAc2oFMLiByAQwA8IBnJgGlLPZcACsAjQwDYqgxlyATxB1mAYwrBO3PjNmr1nAMpg5uJSW2zYyvMEawmAYgBmzpv1kBfN7E8z3W8ji4AEbAbFJejnQsYACuFKbSFrAAJtEsAGoQdADuUrCcABbAuVgUMXQ8sPEsyQDy0LhyxI4suJx03v4WALYs1BDKACoKCflFJZTllUaKxADaTLhidLx2QSwUTAC6nV6Y8ZzY8XmFxcSTHX57-SwAbnQAgpwAkr30J-PnZZdePphXMhM9GgyXC5lSYBY8yYACYAAwIwAueoA59UAQHqAHO1AKI6gHrnQDBGoBwY0ADqarWFwgCMcJRGJxBOJlVJ8KpWLxRKYsC2_ABmDYDw4nHmXkSFhmpiYymidGoNjkvGuEKhsAWgDt7QB7urwmIAcOUAecEkwDa8oBHHRJgH89NX0wDNNoAEuxJgAODU12QD6NoAL1JJgFvjQDMaerAEDBgFgVdWAUItTUxAKB2gB349WAVRtACyaEcAfDrqwBv6YBnRXVgEfbQDM6uq3fb1YBEuUAdrbqwDadtmeExAOEBgDC9dWAWjlDaXAAfOgHdbbZdWSCTgiMQSWxCpIi5iFGrFVzmf6_fhbLpyXlcAXmXtkft2W6tcqy0ewaAsbqirGs1tkbpiYhwg-YXphWAANlP1y7DBXuGIAFYz7B2wAZFhBOhPsxJTBHBsXowG7ZgkEfcp3FgABSEckj-MguXZLp2ioOh-UVQVri3HdmHhJE0WZWl1z7EZmHWTY32wPACDBADYEgugADFgOiMDYEcGJoGUSAYFgAAKJiAEp_wYqo6FiCg4CY2AAGo7FgpgAG5rjHDdkNkeU5wYgAWZ8ADoySvSpdLJAyAGYTNgXSYQMuFX1gZ8LIMgAOAB2UzdIM_SvJ86zbIMmEyVMlyYVc0KgoATkiqzKgs9zLMc3SrwMq8YtgCyorSiLMtSqLPKcuEfJhUzzIcsqgtyrL7Ny_TLMKizXPsjKzLc3Trg5cxNLE2RcNFeEKSZGl92uJcmEo0jhUCOjeosJjWIoECOK4ni-LgITVzoUSFySeIpJkrb5MUuDVI3dSELfbSsPOmy7ISvyr2S8yb1M7L3IypqDPcizIqvXTTOKqLTxslyLNKmzvJhAGbPK37MsMqLWpcqKYba4z4sS58Mufe7kuK1yId04rdLRuy4QCuznxC2H7Jp-rn2fTrfkqMhsI3fr8LhRkiJGukxvItYNim2QaPwCAiDm2QFrY0DJE47jeKgDaRKlix9riQ7cHKY62VOtTvGuHrMGuuYDd0lzdNawyLJhmqLPplyyVa7z_tMqnCsC7HTMM1zre-u3vIKyKMbutz6ZJxznMs_2rwCsG6vMpG_LhT7mufAKg9c5nuq6Lr3DO2QIEcQTQHW2AADIK6wEZgBLsvlYQeBECYYAggAKzoXimB265ujkABhAoNjAAz2jAWpwGVgSG5gYTC6Q9AvGyMRkmKAyamSABRe5xA_LgJGgBgBKYA4IAALxWSp-6HkeDLPy_56AA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.5.1/files/dist/echarts.min.js"></script>
+  
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.5.1/files/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts-gl/2/files/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts-stat/latest/files/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-graph-modularity extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts-graph-modularity/2/files/dist/echarts-graph-modularity.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/4.9.0/files/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.5.1/files/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+      option = {
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'cross',
+      crossStyle: {
+        color: '#fff'
+      }
+    }
+  },
+  toolbox: {
+    feature: {
+      dataView: { show: true, readOnly: false },
+      magicType: { show: true, type: ['line', 'bar'] },
+      restore: { show: true },
+      saveAsImage: { show: true }
+    }
+  },
+  legend: {
+    data: ['2000年城市宜居环境指数', '2010年城市宜居环境指数', '2020年城市宜居环境指数' ]
+  },
+  xAxis: [
+    {
+      type: 'category',
+      data: ['潮州','东莞', '佛山', '广州', '河源', '惠州', '江门', '揭阳','茂名','梅州','清远','汕头','汕尾','韶关','深圳','阳江','云浮','湛江','肇庆','中山','珠海'],
+      axisPointer: {
+        type: 'shadow'
+      }
+    }
+  ],
+  yAxis: [
+    {
+      type: 'value',
+      name: '宜居指数',
+      min: 0,
+      max: 60,
+      interval: 5,
+      axisLabel: {
+        formatter: '{value} %'
+      }
+    },
+  ],
+  series: [
+    {
+      name: '2000年城市宜居环境指数',
+      type: 'bar',
+      tooltip: {
+        valueFormatter: function (value) {
+          return value + ' %';
+        }
+      },
+      data: [
+        45.16, 41.36, 42.05, 53.87, 44.45, 44.46, 42.21, 43.28, 43.29, 43.36, 37.35, 46.69, 39.68, 36.97, 50.42, 41.05, 41.28, 39.08, 45.37, 38.09, 41.84
+      ]
+    },
+    {
+      name: '2010年城市宜居环境指数',
+      type: 'bar',
+      tooltip: {
+        valueFormatter: function (value) {
+          return value + ' %';
+        }
+      },
+      data: [
+        42.37, 44.65, 41.60, 49.79, 38.73, 43.64, 40.90, 43.32, 44.24, 41.03, 35.99, 43.94, 41.16, 37.59, 52.35, 40.82, 40.44, 42.06, 42.51, 41.01, 45.55
+      ]
+    },    
+    {
+      name: '2020年城市宜居环境指数',
+      type: 'bar',
+      tooltip: {
+        valueFormatter: function (value) {
+          return value + ' %';
+        }
+      },
+      data: [
+        43.49, 45.34, 39.31, 43.19, 44.64, 42.57, 42.59, 45.89, 45.74, 34.97, 43.16, 42.81, 40.45, 53.39, 45.66, 43.38, 41.99, 44.09, 38.56, 44.98
+      ]
+    },
+  ]
+};
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
