@@ -1,5 +1,5 @@
 <!--
-	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=dataset-simple0&code=PYBwLglsB2AEC8sDeBYAULWZjADaRAC5l1NMwAnCAc2oFMLiByAQwA8IBnJgGlLPZcACsAjQwDYqgxlyATxB1mAYwrBO3PjNmr1nAMpg5uJSW2zYyvMEawmAYgBmzpv1kBfN7E8z3W8ji4AEbAbFJejnQsYACuFKbSFrAAJtEsAGoQdADuUrCcABbAuVgUMXQ8sPEsyQDy0LhyxI4suJx03v4WALYs1BDKACoKCflFJZTllUaKxADaTLhidLx2QSwUTAC6nV6Y8ZzY8XmFxcSTHX57-SwAbnQAgpwAkr30J-PnZZdePphXMhM9GgyXC5lSYBY8yYACYAAwIwAueoAOPUA8vKALrlAMfKq1hcIAjHCURjsZVcfCiVjVlt-ADMGwHhxOPMvIkLDNTExlNE6NQbHJeNcIVDYAtAHb2gD3dXhMQA4coA84JxgG15QCOOjjAP56ktJgGabQAJdjjAAcGGrsgH0bQAXqTjALfGgGY0qWAIGDALAqUsAoRYapiAUDtADvxUsAqjaAFk1vYA-HSlgDf0wDOilLAI-2gGZ1KWWo1SwCJcoA7WylgG07OM8JiAcIDAGF6UsAtHIqjOAA-dAO622y6skEnBEYgktlZSXZzEKNWKrnM_1-_C2XTkDK4zPMDbITbst1a5QFHdg0BY3Q5WMADqZTpLdMTEOEVsi9MKweEIreYWsMce4Yj7w-wKsAGRYQToZ7MSUwjhsvTAdeYSFP5XcsEA4HLtkkfxkLSsA9vw7RUHQTIiiy1yzvOzD7oSaKUpeo5MOsmwYYEBBgs-sA_nQABib7RJ-sCODE0DKJAMCwAAFMRACUT6EVUdCxBQcDEbAADUdgAeiTAANzXJ205gbIQqDoRMIACxwgAdApCmVAAbGpykAKwAOyVDpADMRnKXpACclTmeZCnKUZm57jCGm6TClRGTCeLKRpRlueZOnKXCPmwDpMKmXp6khaZ5kGUZAAcKmuUZeK2XpBkKRpenKXieI8Ip_lJblemmTpOV6QiymxepHmZXCVV4v5MKWRpcKZY1PAmZlyW5UZzlGTpPB4qFukadc1LmNJ7GyIhHLwgSFIktcmHYSubJ4RARCTRYxFkRQ76UdRtH0XAzETnQbHDkk8Tcbxp0CUJ_4ieJ06ScBl6yXBz17hpznmbFlSxTCMIBUFel4uZqlBYNZUBX9e5-XZDkKTp4NlZUam2bFlnBbFmWozpsWeXpf0KYpAU5T14OVTwxngwSuXmcVBkwgDXkaQNgX-RZuUk1lf2hc5-I8Bp1l2T5RnmZ5BPtYNAWWfVAswqNvyVGQ8HTtNyFwuSaELdOS0bCtsjYHg-GbbI23kR-khUTRdFQMdrFmxYV1xDduDlHdTDCWJEneNcE2YO9cy-zCOnOVTsAEulrNWQplNY3isUZTHe6xWFBmwM1tltbACkWRVOXBfpZmwxpeKZQp5M43ZiXmT9_U6TpCWbk5rV87F_klQNelh2TuXNQj3WxXZ6nC8Pg08JXnk9ZP2UF9zUUjdOY0eF0Y3uE9XgQI4TGgEdsAAGQH1gIzADve_2wg8CIEwwBBAAVnQdFMOd1zdHIADCBQbGAyntGAtRwD20YhfGALEnoeHQF4bIYhkjFGUjUZIABRe44hrxcAkNABgjEmAHAgAALxWJUd-X8f7KTwYQ8BQA
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=dataset-simple0&code=PYBwLglsB2AEC8sDeBYAULWZjADaRAC5l1NMwAnCAc2oFMLiByAQwA8IBnJgGlLPZcACsAjQwDYqgxlyATxB1mAYwrBO3PjNmr1nAMpg5uJSW2zYyvMEawmAYgBmzpv1kBfN7E8z3W8ji4AEbAbFJejnQsYACuFKbSFrAAJtEsAGoQdADuUrCcABbAuVgUMXQ8sPEsyQDy0LhyxI4suJx03v4WALYs1BDKACoKCflFJZTllUaKxADaTLhidLx2QSwUTAC6nV6Y8ZzY8XmFxcSTHX57-SwAbnQAgpwAkr30J-PnZZdePphXMhM9GgyXC5lSYBY8yYACYAAwIwAueoAOPUA8vKALrlAMfKq1hcIAjHCURjsZVcfCiVjeLiEQBaeEExGAPI1AP6pgHDnKn0uF0uHklns2BbfgAzBsB4cTjzLyJCwzUxMZTROjUGxyXjXCFQ2ALQB29oA93SpgBw5QB5wTjANrygEcdHGAfz19aTAM02gAS7HGAA4NbXZAPo2gAvUnGAW-NAMxpVMAQMGAWBUqYBQi1tTEAoHaAHfiqYBVG0ALJoJwB8OlTAG_pgGdFKmAR9tAMzqVL97qpgES5QB2tlTANp2xZ4TEA4QGAML0qYBaOUttcAB86Ad1ttl1ZIJOCIxBJbNKkrLmIUasVXOZ_r9-FsunIxVxJeZR2Rx3Zbq1ymrZ7BoCxunKsYAHU33SW6YmIcN7ZF6YVg8IR98wQ4YO9wxBfb9g_YAGRYII6G_MwkkwRwbF6MBh2YJAv3KdxYEAcDkZySP4yGFJIN3kWZt13FY_yPE9mCxPlLx6G9YBpAk_0fYgCTva4PwoL9GOYg9AOA0CwQg2AoIoGC4LsBDCOQgBSdCLEw_5YAXLp2ioOgJS1KVrhIuUX0JNFKT_LcmHWTZ9MCAg-IgxC6AAMWg6IRMcGJoGUSAYFgAAKSyAEpwP4qo6FiCg4Es2AAGo7FQ9EmAAbmuOcD2w2QNTXfiYQAFjhAA6VLUsqAA2bKMoAVgAdkqQqAGZyoy4qAE5KhqmrUoy8q72fGFcqKmFKnKmE8Qy3Lyu6mrCoyuFBtgQqYSq4qcsmqqatK8qAA5Mq68q8Sa4rStS3LioyvE8R4NKRvWo7iqqwrDuKhEMqWnLer2uF7rxEaYTq3K4T2t6eEqvaNqO8qOvKwqeDxKaity65BXMBKfNkTTmE5CkSWuAyjMo2RsDwMy4YsSybKEuzJAExznKgOAPMI7zcIseIAqCwjQvClDIpig84owv8krU9nn1yjqaqWyolphGFRvG4q8RqrLxrB67RqF59hua1rUsK6XrsqbKmqWuqJqWvbNcKpa-uKoXUrS0bDsB6W7p4Crpbot6LtKmERf63LQbGkbaqOi39qFqaOvxHhcoa5rBvKmq-pNn6wdGuqXuDmEod-SoyHUg8EbseFyV0lGDzRjYMc3UyICIXHZHx2zYOJhynJcimvMr2n_LiBncHKJmmAi6LYu8a5Ycwbm5n7mFCo6u3YAJHaPfq1Lbb1vElt2ufnyW6bStgD6mu-2BUtq27DomkrqsV3K8T21LrYN5q1pqgWQcKwrVrvdqvsDpaRsu0Hionq2jofRVgDJazUcph1AWDHg18-qA2gQdI-ft5qQwPNDDw94abZ2pFyJGFF9IjGYEsaARFrjLnFM8EEdAnyHVRmXCuNNMDV0JrXWw9cyauUpp3Og1N-77DboFWAwUwo9ykmzfisksJczSPMBBT1Kgwj2hVbqm1FYKOqjlWALVmqe33mLGqssxa5S6tPMWl9KgElul1BBk1f5FTvC9LKh0pb9UWs1EGB9qqJz6sbHg0sBqgxGniT2QSMqix-mLOEIN2qjWKmgyRmckhYM5NyXkbIS54TlEQkhB4yFcAockKhjETLY3LuZJITDhJ11Jo3dyzcGFkDpu3QRjNhGwFEf3CR_wpGQnmDSKqK0zoR3CeLaBj0QZ9IytHOOWUQZ7S_jwGkI04TvX2l1GkoDcqzKGREz26zJnBIAWHIqg0r5C0yoLBZmUzFNQavAiG9sga5TiRzAU6B3Bsy8BARw7lQA1IAGR_KwCMYA3zfnkwQPARATBgBBAAFZ0GckwHhB5uhyAAMIFA2GADK7QwC1HAOTNyYKYCeTEVhdAXhshiGSMUDKNRkgAFF7jiAAlwCQxCKBuSYAcCAAAvIisBUUYqxRlHl_LSVAA
 	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
 -->
 <!DOCTYPE html>
@@ -62,7 +62,7 @@
     }
   },
   legend: {
-    data: ['2000年常住人口', '2010年常住人口', '2020年常住人口', ]
+    data: ['2000年常住人口', '2010年常住人口', '2020年常住人口','2000-2010年增长率','2010-2020年增长率' ]
   },
   xAxis: [
     {
@@ -84,6 +84,16 @@
         formatter: '{value} 万'
       }
     },
+       {
+      type: 'value',
+      name: '人口增长率',
+      min: -10,
+      max: 100,
+      interval: 10,
+      axisLabel: {
+        formatter: '{value} %'
+      }
+    } 
   ],
   series: [
     {
@@ -122,6 +132,28 @@
         256.84, 1046.66, 949.89, 1867.66, 283.77, 604.29, 479.81, 557.78, 617.41,387.32,396.95,550.20,267.28,285.51,1756.01,260.30,238.34,698.12,411.36,411.81,243.96
       ]
     },
+    {
+      name: '2000-2010年增长率',
+      type: 'line',
+      yAxisIndex: 1,
+      tooltip: {
+        valueFormatter: function (value) {
+          return value + ' %';
+        }
+      },
+      data: [11.04, 27.53, 34.78, 27.74, 30.36, 42.93, 12.62, 12.17, 10.82,11.52,17.50,15.41,19.67,3.35,47.79,11.58,9.63,15.16,16.22,32.05,26.07]
+    },
+    {
+      name: '2010-2020年增长率',
+      type: 'line',
+      yAxisIndex: 1,
+      tooltip: {
+        valueFormatter: function (value) {
+          return value + ' %';
+        }
+      },
+      data: [-3.80,27.33,32.03,47.05,-3.91,31.45,7.85,-5.09,6.12,-8.65,7.33,2.06,-8.96,1.01,69.53,7.48,0.98,-0.17,4.99,41.56,56.36]
+    }
   ]
 };
 
